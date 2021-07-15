@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+nav{
+    position: relative;
+    height: 50px;
+    background-color: #333;
+    width:auto;
+}
+nav h1{
+    position:absolute ;
+    font-size: large;
+    width:200px;
+    line-height: 50px;
+    left:5%;
+
+    color:#fff;
+    font-size:30px;
+    text-transform: uppercase;
+}
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 10px;
+}
+nav ul li a{
+    color:#fff;
+    font-weight: 500;
+    padding:5px 8px;
+    border-radius: 5px;
+    position: relative;
+}
+label #sign-1, 
+label #sign-2{
+    font-size: 30px;
+    color:#fff;
+    cursor: pointer;
+    line-height: 30px;
+    float: right;  
+    color:#fff;
+    line-height:30px;
+    margin-left:10px;
+    padding-right:20px;
+    padding-top:10px; 
+    display:none;
+}
+#sort-menu{
+    display: none;
+}
+.beg-field{
+    width:100%;
+    display: flex;
+    height:100vh;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+.beg-field{
+    background-image:linear-gradient(to left, #a7a401, #ec8c1e);
+}
+.beg-field h1{
+    font-size: 50px;
+    color:#fff;
+
+}
+/* ==================media quary
+================================= */
+@media only screen and (max-width:678px){
+    label #sign-1{
+        display: block;
+     }
+     h1{
+         font-size: 25px;
+         text-align: center;
+     }
+    nav ul{
+        position:fixed;
+        left:-100%;
+        width:100%;
+        height:100vh;
+        top:50px;
+        background:linear-gradient(to left, #444444de,#ff000079);
+        text-align:center;
+        transition:1s;
+        z-index: 10;
+    }
+    nav ul li{
+        display: block;
+        border-bottom: 2px solid #fff;
+        margin: 40px;
+        line-height: 30px ;
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+     #sort-menu:checked ~ ul{
+         left:0;
+     }
+     #sort-menu:checked ~ label #sign-1{
+         display: none;
+     }
+     #sort-menu:checked ~ label #sign-2{
+         display: block;
+     }
+
+}
